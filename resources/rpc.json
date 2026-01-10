@@ -362,6 +362,11 @@
         "aliases": ["pokemon legends: arceus", "pokemon legends arceus", "legends arceus"]
       },
       {
+        "name": "Pokemon Legends: Z-A",
+        "pic": "legendsza",
+        "aliases": ["pokemon legends: z-a", "pokemon legends: za", "pokemon legends za", "pokemon legends za-", "legends z-a", "legends za"]
+      },
+      {
         "name": "Pokemon UNITE",
         "pic": "pokemon_unite",
         "aliases": ["pokemon unite", "unite"]
