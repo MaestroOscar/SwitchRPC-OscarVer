@@ -74,9 +74,9 @@
 		     {"name": "SMD - NSO", "pic": "smd"},
 		     {"name": "YouTube", "pic": "youtube"},
 		     {"name": "Hulu", "pic": "hulu"},
-		     {"name": "Tomodachi Life: Living the dream", "pic": "https://i.postimg.cc/59rfKjtw/oscar-ltd.png"},
-		     {"name": "Rhythm Heaven Groove", "pic": "oscar_rhythm-heaven.png"},
-         {"name": "PATAPON 1+2 REPLAY", "pic": "oscar_patapon.png"},
+		     {"name": "Tomodachi Life: Living the dream", "pic": "o1_ltd"},
+		     {"name": "Rhythm Heaven Groove", "pic": "o1_rhythm-heaven.png"},
+         {"name": "PATAPON 1+2 REPLAY", "pic": "o1_patapon.png"},
 		     {"name": "Twitch", "pic": "twitch"}],
 	"enabled": true,
 	"gameLibrary": [
@@ -87,17 +87,17 @@
       },
      {
         "name": "Tomodachi Life: Living the dream",
-        "pic": "https://i.postimg.cc/59rfKjtw/oscar-ltd.png",
+        "pic": "o1_ltd",
         "aliases": ["tomodachi life: living the dream", "tomodachi life", "tomodachi", "tomodachi life ltd", "ltd", "living the dream", "living the dream"]
       },
       {
         "name": "Rhythm Heaven Groove",
-        "pic": "oscar_rhythm-heaven",
+        "pic": "o1_rhythm-heaven",
         "aliases": ["rhythm heaven groove", "rhythm Heaven", "rhythm paradise", "rhythm paradise groove"]
       },
       {
         "name": "PATAPON 1+2 REPLAY",
-        "pic": "oscar_patapon",
+        "pic": "o1_patapon",
         "aliases": ["patapon 1+2 replay", "patapon", "patapon1+2"]
       },
       {

@@ -3,10 +3,27 @@ let production = true;
 let version = 4;
 
 //dependencies
-const DiscordRPC = require('discord-rpc');
-const clientId = '1006157577459081296'; // Regresamos al Client ID original de fábrica
-const rpc = new DiscordRPC.Client({ transport: 'ipc' });
-rpc.login({ clientId }).catch(console.error);
+const ID_ORIGINAL = '1006157577459081296'; 
+const ID_PERSONALIZADO = '1514171564172509224';
+
+let rpc = null;
+let currentClientId = '';
+
+function conectarRPC(targetClientId) {
+    if (currentClientId === targetClientId) return;
+
+    if (rpc) {
+        try {
+            rpc.destroy();
+        } catch (e) {
+            console.log("Cambiando de aplicación RPC...");
+        }
+    }
+
+    rpc = new DiscordRPC.Client({ transport: 'ipc' });
+    rpc.login({ clientId: targetClientId }).catch(console.error);
+    currentClientId = targetClientId;
+}
 
 const axios = require('axios');
 const { app, BrowserWindow, ipcMain } = require('electron');
@@ -90,19 +107,30 @@ ipcMain.on('desc:value', function (e, value) {
 //RPC
 function findGame() {
     let gotGame = name;
-    let pic = 'switch'; // Por defecto
+    let pic = 'switch';
+    let appIdParaEsteJuego = ID_ORIGINAL; 
+
     if (!name) return;
 
     data.gameLibrary.forEach(function(game) {
         game.aliases.forEach(function(alias) {
             if (alias === name.toLowerCase()) {
                 gotGame = game.name;
-                pic = game.pic; // Aquí lee tu URL desde tu GitHub ya actualizado
+                pic = game.pic;
+
+                // AUTOMÁTICO: Si la foto empieza con custom_, cambia a tu App
+                if (game.pic && game.pic.startsWith('o1_')) {
+                    appIdParaEsteJuego = ID_PERSONALIZADO;
+                }
             }
         });
     });
 
-    setPresence(gotGame, desc, pic);
+    conectarRPC(appIdParaEsteJuego);
+
+    setTimeout(() => {
+        setPresence(gotGame, desc, pic);
+    }, 500); 
 }
 
 function setPresence(game, desc, pic) {
@@ -112,20 +140,11 @@ function setPresence(game, desc, pic) {
 
     if (!rpc) return;
 
-    let imagenFinal = pic;
-
-    // EL DISFRAZ MÁGICO: Si en tu JSON pusiste una URL de GitHub, 
-    // la transformamos al formato que Discord sí acepta de forma externa
-    if (pic && pic.startsWith('http')) {
-        let urlLimpia = pic.replace('https://', '');
-        imagenFinal = `mp:external/https/${urlLimpia}`;
-    }
-
     rpc.setActivity({
         state: desc,
         details: game,
-        largeImageKey: imagenFinal, // Le mandamos la URL disfrazada
+        largeImageKey: pic, 
         largeImageText: 'SwitchRPCUpdated',
         instance: false,
-    }).catch(err => console.error("Error al actualizar RPC:", err));
+    }).catch(err => console.error("Error al actualizar presencia:", err));
 }
