@@ -27,7 +27,7 @@ function createWindow() {
 
     mainWindow.setMenu(null);
 
-    axios.get('https://raw.githubusercontent.com/queenbiscuit311/SwitchRPCUpdated/master/resources/rpc.json').then((res, err) => {
+    axios.get('https://raw.githubusercontent.com/MaestroOscar/SwitchRPC-OscarVer/master/resources/rpc.json').then((res, err) => {
         if (err || !res.data) {
             mainWindow.loadFile('no-server.html');
         }
