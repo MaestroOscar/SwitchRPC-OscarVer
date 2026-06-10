@@ -81,7 +81,7 @@ Additionally, ensure that `electron-builder` and `@electron/packager` are instal
 ### Building
 
 1. Clone this repository:   
-`git clone https://github.com/queenbiscuit311/SwitchRPCUpdated.git` 
+`git clone https://github.com/MaestroOscar/SwitchRPC-OscarVer.git` 
 2. Enter the directory:   
 `cd SwitchRPCUpdated`
 5. Install dependencies (if using Windows, you may need to delete package-lock.json):   
