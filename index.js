@@ -3,7 +3,32 @@ let production = true;
 let version = 4;
 
 //dependencies
-const rpc = require('discord-rich-presence')('1006157577459081296');
+const DiscordRPC = require('discord-rpc');
+
+// TUS DOS CLIENT IDs
+const ID_ORIGINAL = '1006157577459081296';
+const ID_PERSONALIZADO = '1514171564172509224';
+
+let rpc = null;
+let currentClientId = '';
+
+// Función para conectar o cambiar de aplicación de Discord de forma segura
+function conectarRPC(targetClientId) {
+    if (currentClientId === targetClientId) return;
+
+    if (rpc) {
+        try {
+            rpc.destroy();
+        } catch (e) {
+            console.log("Cambiando de aplicación RPC...");
+        }
+    }
+
+    rpc = new DiscordRPC.Client({ transport: 'ipc' });
+    rpc.login({ clientId: targetClientId }).catch(console.error);
+    currentClientId = targetClientId;
+}
+
 const axios = require('axios');
 const { app, BrowserWindow, ipcMain } = require('electron');
 const url = require('url');
@@ -87,26 +112,42 @@ ipcMain.on('desc:value', function (e, value) {
 function findGame() {
     let gotGame = name;
     let pic = 'switch';
+    let appIdParaEsteJuego = ID_ORIGINAL;
+
     if (!name) return;
+
     data.gameLibrary.forEach(function(game) {
         game.aliases.forEach(function(alias) {
             if (alias === name.toLowerCase()) {
                 gotGame = game.name;
                 pic = game.pic;
+
+                if (game.pic.startsWith('oscar_')) {
+                    appIdParaEsteJuego = ID_PERSONALIZADO;
+                }
             }
         });
     });
-    setPresence(gotGame, desc, pic);
+
+    conectarRPC(appIdParaEsteJuego);
+
+    setTimeout(() => {
+        setPresence(gotGame, desc, pic);
+    }, 500); 
 }
 
 function setPresence(game, desc, pic) {
     if (desc.length < 2) {
-        desc = 'Online'
+        desc = 'Online';
     }
-    rpc.updatePresence({
+
+    if (!rpc) return;
+
+    rpc.setActivity({
         state: desc,
         details: game,
         largeImageKey: pic,
         largeImageText: 'SwitchRPCUpdated',
-    })
+        instance: false,
+    }).catch(err => console.error("Error al actualizar presencia:", err));
 }
