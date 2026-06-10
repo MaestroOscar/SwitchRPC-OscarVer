@@ -1,8 +1,8 @@
 # SwitchRPCUpdated
 
-### The simplest possible Nintendo Switch/Switch 2 Discord integration available for Linux, macOS, and Windows, now with an updated game list.
+### The simplest possible Nintendo Switch/Switch 2 Discord integration available for Windows, now with an updated game list with switch 2 games (more soon).
 
-The list of all supported titles is availible in the [supportlist.md](https://github.com/queenbiscuit311/SwitchRPCUpdated/blob/master/supportlist.md) file.
+The list of all supported titles is availible in the [supportlist.md](https://github.com/MaestroOscar/SwitchRPC-OscarVer/blob/master/supportlist.md) file.
 
 Entering a title that is not in the support list will still work, although the game's icon will not show up on Discord.
 
