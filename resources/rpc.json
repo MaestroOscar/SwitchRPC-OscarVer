@@ -74,7 +74,7 @@
 		     {"name": "SMD - NSO", "pic": "smd"},
 		     {"name": "YouTube", "pic": "youtube"},
 		     {"name": "Hulu", "pic": "hulu"},
-		     {"name": "Tomodachi Life: Living the dream", "pic": "https://raw.githubusercontent.com/MaestroOscar/SwitchRPC-OscarVer/master/assets/icons/oscar_ltd.png"},
+		     {"name": "Tomodachi Life: Living the dream", "pic": "https://i.postimg.cc/59rfKjtw/oscar-ltd.png"},
 		     {"name": "Rhythm Heaven Groove", "pic": "oscar_rhythm-heaven.png"},
          {"name": "PATAPON 1+2 REPLAY", "pic": "oscar_patapon.png"},
 		     {"name": "Twitch", "pic": "twitch"}],
@@ -87,7 +87,7 @@
       },
      {
         "name": "Tomodachi Life: Living the dream",
-        "pic": "https://raw.githubusercontent.com/MaestroOscar/SwitchRPC-OscarVer/master/assets/icons/oscar_ltd.png",
+        "pic": "https://i.postimg.cc/59rfKjtw/oscar-ltd.png",
         "aliases": ["tomodachi life: living the dream", "tomodachi life", "tomodachi", "tomodachi life ltd", "ltd", "living the dream", "living the dream"]
       },
       {
