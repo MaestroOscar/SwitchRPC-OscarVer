@@ -108,7 +108,7 @@ ipcMain.on('desc:value', function (e, value) {
 function findGame() {
     let gotGame = name;
     let pic = 'switch';
-    let appIdParaEsteJuego = ID_ORIGINAL; 
+    let appIdParaEsteJuego = ID_ORIGINAL;
 
     if (!name) return;
 
@@ -118,8 +118,7 @@ function findGame() {
                 gotGame = game.name;
                 pic = game.pic;
 
-                // AUTOMÁTICO: Si la foto empieza con custom_, cambia a tu App
-                if (game.pic && game.pic.startsWith('o1_')) {
+                if (game.pic.startsWith('o1_')) {
                     appIdParaEsteJuego = ID_PERSONALIZADO;
                 }
             }
