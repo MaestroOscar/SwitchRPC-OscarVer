@@ -3,6 +3,7 @@ let production = true;
 let version = 4;
 
 //dependencies
+const DiscordRPC = require('discord-rpc');
 const ID_ORIGINAL = '1006157577459081296'; 
 const ID_PERSONALIZADO = '1514171564172509224';
 
