@@ -1,18 +1,18 @@
 {
-  "name": "SwitchRPCUpdated",
-  "version": "1.3.1",
-  "description": "The simplest possible Nintendo Switch/Switch 2 Discord integration, now with an updated game list.",
+  "name": "SwitchRPC-OscarVer",
+  "version": "1.0",
+  "description": "The simplest possible Nintendo Switch/Switch 2 Discord integration, now with an updated game list including Nintendo Switch 2 games.",
   "main": "index.js",
   "scripts": {
     "start": "electron index.js",
     "package": "",
-    "build": "electron-packager . SwitchRPCUpdated --overwrite --icon=build/icon.ico --out=dist --electronVersion 11.5.0"
+    "build": "electron-packager . SwitchRPCOscarVer --overwrite --icon=build/icon.ico --out=dist --electronVersion 11.5.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaestroOscar/SwitchRPC-OscarVer.git"
   },
-  "author": "NintenZone Technologies, queenbiscuit311",
+  "author": "NintenZone Technologies, queenbiscuit311, Maestro_Oscar",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/MaestroOscar/SwitchRPC-OscarVer/issues"

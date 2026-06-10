@@ -54,6 +54,8 @@ Mario Tennis Aces
 
 Metroid Dread
 
+Miitopia
+
 Minecraft: Bedrock Edition
 
 Monster Camp XXL
@@ -72,6 +74,8 @@ Ninjala
 
 Overcooked 2
 
+PATAPON 1+2 REPLAY
+
 Paper Mario: The Origami King
 
 Pokemon Brilliant Diamond
@@ -86,13 +90,11 @@ Pokemon Sword
 
 Pokemon UNITE
 
-Pokemon: Let's Go
+Pokemon: Let's Go Eevee!
 
-Eevee!
+Pokemon: Let's Go Pikachu!
 
-Pokemon: Let's Go
-
-Pikachu!
+Rhythm Heaven Groove
 
 Ring Fit Adventure
 
@@ -136,7 +138,11 @@ The Legend of Zelda: Tears of the Kingdom
 
 TSUKIHIME -A piece of blue glass moon-
 
+Tomodachi Life: Living the Dream
+
 Twitch
+
+Undertale
 
 Xenoblade Chronicles 2
 
@@ -146,3 +152,8 @@ Xenoblade Chronicles: Definitive Edition
 
 YouTube
 
+**Switch 2:**
+
+Donkey Kong Bananza
+
+Mario Kart World
