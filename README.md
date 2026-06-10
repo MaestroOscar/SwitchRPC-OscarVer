@@ -1,8 +1,8 @@
 # SwitchRPCUpdated
 
-### The simplest possible Nintendo Switch/Switch 2 Discord integration available for Linux, macOS, and Windows, now with an updated game list.
+### The simplest possible Nintendo Switch/Switch 2 Discord integration available for Windows, now with an updated game list with switch 2 games (more soon).
 
-The list of all supported titles is availible in the [supportlist.md](https://github.com/queenbiscuit311/SwitchRPCUpdated/blob/master/supportlist.md) file.
+The list of all supported titles is availible in the [supportlist.md](https://github.com/MaestroOscar/SwitchRPC-OscarVer/blob/master/supportlist.md) file.
 
 Entering a title that is not in the support list will still work, although the game's icon will not show up on Discord.
 
@@ -32,35 +32,15 @@ This fork of the SwitchRPCUpdated was made because I want to make the app suppor
 
 Currently availible build types:
 
-Windows (Portable), Windows (Installer), Linux (AppImage), macOS (Apple Silicon)
+Windows (Portable)
 
 Builds are availible in the releases section.
-
-Since I don't have an Intel Mac to build on, macOS x86_64 users will need to build from source.
 
 ## Building from source:
 
 ### Prerequisites:
 
 Before building, ensure that `nodejs` and `npm` are installed on your device. Instructions for Linux, macOS, and Windows are provided below:
-   
-   **Linux:**
-   
-   Arch Linux and related distributions [Manjaro, EndeavourOS] (Pacman): `sudo pacman -S nodejs npm`
-
-   Fedora/RHEL and related distributions [Nobara, Rocky Linux, Alma Linux] (DNF): `sudo dnf module install nodejs`
-
-   Debian and related distributions [Ubuntu, Linux Mint] (APT): `sudo apt install nodejs npm`
-
-   Gentoo Linux (Portage): `emerge nodejs`
-
-   Void Linux (XBPS): `sudo xbps-install nodejs`
-   
-   **macOS:**
-   
-   [Brew](https://brew.sh) Package Manager: `brew install node`
-   
-   **Windows:**
    
    Option 1:
    Instructions to install node.js and npm are provided by Microsoft [here](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows_).
@@ -69,10 +49,6 @@ Before building, ensure that `nodejs` and `npm` are installed on your device. In
    [Chocolatey](https://chocolatey.org/install) Package Manager: `choco install nodejs`
    
 Additionally, ensure that `electron-builder` and `@electron/packager` are installed through npm:
-
-   Linux/macOS:
-   
-   `sudo npm install electron-builder @electron/packager -g`
 
    Windows:
 
@@ -84,7 +60,7 @@ Additionally, ensure that `electron-builder` and `@electron/packager` are instal
 `git clone https://github.com/MaestroOscar/SwitchRPC-OscarVer.git` 
 2. Enter the directory:   
 `cd SwitchRPCUpdated`
-5. Install dependencies (if using Windows, you may need to delete package-lock.json):   
+5. Install dependencies (you may need to delete package-lock.json):   
 `npm install`
 6. Build:   
 `electron-builder`
@@ -95,6 +71,8 @@ Additionally, ensure that `electron-builder` and `@electron/packager` are instal
 Credits to:
 
 [realdevon](https://github.com/realdevon) for creating the original SwitchRPC.
+
+[queenbiscuit311](https://github.com/queenbiscuit311) for creating the SwitchRPCUdpated Fork.
 
 [simonliii](https://github.com/simonliii) for creating pull request realdevon/SwitchRPC/[#59](https://github.com/realdevon/SwitchRPC/pull/59), which made the games list clickable.
 

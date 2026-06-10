@@ -4,20 +4,20 @@ let version = 4;
 
 //dependencies
 const DiscordRPC = require('discord-rpc');
-const ID_ORIGINAL = '1006157577459081296'; 
-const ID_PERSONALIZADO = '1514171564172509224';
+const ORIGINAL_ID = '1006157577459081296'; 
+const CUSTOM_ID = '1514171564172509224';
 
 let rpc = null;
 let currentClientId = '';
 
-function conectarRPC(targetClientId) {
+function connectRPC(targetClientId) {
     if (currentClientId === targetClientId) return;
 
     if (rpc) {
         try {
             rpc.destroy();
         } catch (e) {
-            console.log("Cambiando de aplicación RPC...");
+            console.log("Changing RPC...");
         }
     }
 
@@ -96,6 +96,7 @@ ipcMain.on('min', function() {
 let name;
 let desc;
 let consoleType = 'Nintendo Switch';
+
 //catch values
 ipcMain.on('game:value', function(e, value) {
     name = value;
@@ -114,7 +115,7 @@ ipcMain.on('desc:value', function (e, value) {
 function findGame() {
     let gotGame = name;
     let pic = 'switch';
-    let appIdParaEsteJuego = ID_ORIGINAL; // Por defecto usamos la app original
+    let appid = ORIGINAL_ID; // default
 
     if (!name) return;
 
@@ -125,17 +126,16 @@ function findGame() {
                 pic = game.pic;
 
                 if (game.pic && game.pic.startsWith('o1_')) {
-                    appIdParaEsteJuego = ID_PERSONALIZADO;
+                    appid = CUSTOM_ID;
                 }
             }
         });
     });
 
     
-    conectarRPC(appIdParaEsteJuego);
+    connectRPC(appid);
 
     setTimeout(() => {
-        // 🌟 CORREGIDO: Ahora sí le pasamos "smallPic" a la función que habla con Discord
         setPresence(gotGame, desc, pic, consoleType);
     }, 500); 
 }
@@ -147,11 +147,11 @@ function setPresence(game, desc, pic, gameConsole) {
 
     if (!rpc) return;
 
-    let lineaConsolaYDesc = `${gameConsole}  •  ${desc}`;
+    let consoleydesc = `${gameConsole}  •  ${desc}`;
 
     rpc.setActivity({
         details: game,
-        state: lineaConsolaYDesc,
+        state: consoleydesc,
         largeImageKey: pic, 
         largeImageText: 'SwitchRPC - Oscar Ver',
         smallImageText: gameConsole,
