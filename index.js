@@ -90,14 +90,14 @@ ipcMain.on('desc:value', function (e, value) {
 //RPC
 function findGame() {
     let gotGame = name;
-    let pic = 'switch'; // Imagen por defecto si no hay coincidencia
+    let pic = 'switch'; // Por defecto
     if (!name) return;
 
     data.gameLibrary.forEach(function(game) {
         game.aliases.forEach(function(alias) {
             if (alias === name.toLowerCase()) {
                 gotGame = game.name;
-                pic = game.pic; // Aquí guardará tu URL de GitHub cuando hagas el push
+                pic = game.pic; // Aquí lee tu URL desde tu GitHub ya actualizado
             }
         });
     });
@@ -112,10 +112,19 @@ function setPresence(game, desc, pic) {
 
     if (!rpc) return;
 
+    let imagenFinal = pic;
+
+    // EL DISFRAZ MÁGICO: Si en tu JSON pusiste una URL de GitHub, 
+    // la transformamos al formato que Discord sí acepta de forma externa
+    if (pic && pic.startsWith('http')) {
+        let urlLimpia = pic.replace('https://', '');
+        imagenFinal = `mp:external/https/${urlLimpia}`;
+    }
+
     rpc.setActivity({
         state: desc,
         details: game,
-        largeImageKey: pic, // La librería moderna acepta aquí la URL de GitHub sin pestañear
+        largeImageKey: imagenFinal, // Le mandamos la URL disfrazada
         largeImageText: 'SwitchRPCUpdated',
         instance: false,
     }).catch(err => console.error("Error al actualizar RPC:", err));
