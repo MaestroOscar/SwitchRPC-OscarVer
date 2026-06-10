@@ -158,6 +158,14 @@
 				<label>Game</label>
 				<input type="text" id="game" name="game" placeholder="What game are you playing?">
 				<br />
+
+                <label for="consoleSelect">Console:</label>
+                    <select id="consoleSelect" name="consoleSelect" style="width: 100%; padding: 4px; margin: 5px 0 15px 0;">
+                        <option value="Nintendo Switch">Nintendo Switch</option>
+                        <option value="Nintendo Switch 2">Nintendo Switch 2</option>
+                    </select>
+                    <br>
+                
 				<label>Description</label>
 				<label style="color:gray;">(Default: 'Online', Min. Length: 2)</label>
 				<input type="text" id="desc" name="desc" placeholder="What mode? (Single Player, Online, etc.)">
@@ -166,6 +174,8 @@
 			</form>
 		</div>
 	</div>
+    
+
 	<div class="right-side">
 		<h2>Supported Titles</h2>
 		<br>
@@ -173,6 +183,7 @@
 		</div>
 	</div>
 </div>
+
 
 <script>
     const electron = require('electron');
@@ -192,14 +203,17 @@
         ipcRenderer.send('min');
     });
 	
+    
     const form = document.querySelector('form');
     form.addEventListener('submit', submitForm);
 
     function submitForm(e) {
         e.preventDefault();
         const game = document.querySelector('#game').value;
+        const consoleType = document.querySelector('#consoleSelect').value;
         const desc = document.querySelector('#desc').value;
         ipcRenderer.send('game:value', game);
+        ipcRenderer.send('console:value', consoleType);
         ipcRenderer.send('desc:value', desc);
 	}
 	

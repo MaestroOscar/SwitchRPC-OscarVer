@@ -95,9 +95,14 @@ ipcMain.on('min', function() {
 
 let name;
 let desc;
+let consoleType = 'Nintendo Switch';
 //catch values
 ipcMain.on('game:value', function(e, value) {
     name = value;
+});
+
+ipcMain.on('console:value', function(e, value) {
+    consoleType = value;
 });
 
 ipcMain.on('desc:value', function (e, value) {
@@ -109,7 +114,7 @@ ipcMain.on('desc:value', function (e, value) {
 function findGame() {
     let gotGame = name;
     let pic = 'switch';
-    let appIdParaEsteJuego = ID_ORIGINAL;
+    let appIdParaEsteJuego = ID_ORIGINAL; // Por defecto usamos la app original
 
     if (!name) return;
 
@@ -119,32 +124,38 @@ function findGame() {
                 gotGame = game.name;
                 pic = game.pic;
 
-                if (game.pic.startsWith('o1_')) {
+                if (game.pic && game.pic.startsWith('o1_')) {
                     appIdParaEsteJuego = ID_PERSONALIZADO;
                 }
             }
         });
     });
 
+    
     conectarRPC(appIdParaEsteJuego);
 
     setTimeout(() => {
-        setPresence(gotGame, desc, pic);
+        // 🌟 CORREGIDO: Ahora sí le pasamos "smallPic" a la función que habla con Discord
+        setPresence(gotGame, desc, pic, consoleType);
     }, 500); 
 }
 
-function setPresence(game, desc, pic) {
+function setPresence(game, desc, pic, gameConsole) {
     if (desc.length < 2) {
         desc = 'Online';
     }
 
     if (!rpc) return;
 
+    let lineaConsolaYDesc = `${gameConsole}  •  ${desc}`;
+
     rpc.setActivity({
-        state: desc,
         details: game,
+        state: lineaConsolaYDesc,
         largeImageKey: pic, 
-        largeImageText: 'SwitchRPCUpdated',
+        largeImageText: 'SwitchRPC - Oscar Ver',
+        smallImageText: gameConsole,
+        
         instance: false,
     }).catch(err => console.error("Error al actualizar presencia:", err));
 }
