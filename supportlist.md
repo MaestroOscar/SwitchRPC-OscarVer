@@ -12,6 +12,8 @@ Bayonetta
 
 Bayonetta 2
 
+BOXBOY! + BOXGIRL!
+
 Celeste
 
 Cuphead
