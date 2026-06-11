@@ -1,4 +1,4 @@
-# SwitchRPCUpdated
+# SwitchRPC - Oscar's Version
 
 ### The simplest possible Nintendo Switch/Switch 2 Discord integration available for Windows, now with an updated game list with switch 2 games (more soon).
 
