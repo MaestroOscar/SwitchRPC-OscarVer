@@ -84,8 +84,8 @@
          {"name": "Donkey Kong Bananza", "pic": "o1_dkbanana"},
          {"name": "Pokemon Pokopia", "pic": "o1_pokopia"},
          {"name": "Luigi's Mansion 3", "pic": "o1_luigi3"},
-         {"name": "Luigi's Mansion 2 HD", "pic": "o1_luigi2"},
-         {"name": "Doki Doki Literature Club Plus!", "pic": "o1_ddlc_"},
+         {"name": "Luigi's Mansion 2 HD", "pic": "o1_luigi2hd"},
+         {"name": "Doki Doki Literature Club Plus!", "pic": "o1_ddlc"},
          {"name": "Metroid Prime 4: Beyond", "pic": "o1_metroid4"},
          {"name": "DELTARUNE", "pic": "o1_delta"},
          {"name": "Star Fox", "pic": "o1_starfox"},
@@ -155,12 +155,12 @@
       },
       {
         "name": "Luigi's Mansion 2 HD",
-        "pic": "o1_luigi2",
+        "pic": "o1_luigi2hd",
         "aliases": ["luigi's mansion 2", "luigi mansion 2"]
       },
       {
         "name": "Doki Doki Literature Club Plus!",
-        "pic": "o1_ddlc_",
+        "pic": "o1_ddlc",
         "aliases": ["doki doki literature club plus!", "ddlcp", "ddlc+", "doki doki", "doki doki literature club", "monika after story", "just monika"]
       },
       {
