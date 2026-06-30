@@ -1,4 +1,4 @@
-# SwitchRPCUpdated
+# SwitchRPC - Oscar's Version
 
 ### The simplest possible Nintendo Switch/Switch 2 Discord integration available for Windows, now with an updated game list with switch 2 games (more soon).
 
@@ -12,7 +12,7 @@ Since the file that handles the supported games is hosted on GitHub and the imag
 
 ### Explanation:
 
-SwitchRPCUpdated is the simplest possible implementation of Discord Rich Presence for the Nintendo Switch/Switch 2. Instead of directly interfacing with Nintendo's servers like [nxapi](https://github.com/samuelthomas2774/nxapi), SwitchRPCUpdated has you manually set your Rich Presence by setting a game and a description. While not automatic, this method is reliable and is not going to break when Nintendo updates their APIs, unlike nxapi. This project is mainly intended as a backup in case nxapi stops working, but it can also be used in its own right.
+SwitchRPC Oscar's Version is the simplest possible implementation of Discord Rich Presence for the Nintendo Switch/Switch 2. Instead of directly interfacing with Nintendo's servers like [nxapi](https://github.com/samuelthomas2774/nxapi), SwitchRPCOscarVer has you manually set your Rich Presence by setting a game and a description. While not automatic, this method is reliable and is not going to break when Nintendo updates their APIs, unlike nxapi. This project is mainly intended as a backup in case nxapi stops working, but it can also be used in its own right.
 
 ### Why a fork?
 
@@ -24,7 +24,9 @@ This fork of the SwitchRPCUpdated was made because I want to make the app suppor
 
 ![image](https://github.com/user-attachments/assets/c699d099-d7d3-4f9f-8281-a90d17b99712)
 
+### (soon I'll add my own screenshots ehehe) ###
 
+##
 
 **WIP:** Switch 2 Support
 
