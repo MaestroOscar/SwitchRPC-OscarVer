@@ -20,7 +20,7 @@ Celeste
 
 Cuphead
 
-DELTARUNEv
+DELTARUNE
 
 Doki Doki Literature Club Plus!
 
