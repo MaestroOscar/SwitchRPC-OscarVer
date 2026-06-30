@@ -85,7 +85,7 @@
          {"name": "Pokemon Pokopia", "pic": "o1_pokopia"},
          {"name": "Luigi's Mansion 3", "pic": "o1_luigi3"},
          {"name": "Luigi's Mansion 2 HD", "pic": "o1_luigi2"},
-         {"name": "Doki Doki Literature Club Plus!", "pic": "o1_ddlc+"},
+         {"name": "Doki Doki Literature Club Plus!", "pic": "o1_ddlc_"},
          {"name": "Metroid Prime 4: Beyond", "pic": "o1_metroid4"},
          {"name": "DELTARUNE", "pic": "o1_delta"},
          {"name": "Star Fox", "pic": "o1_starfox"},
@@ -93,8 +93,8 @@
          {"name": "Yoshi's Crafted World", "pic": "o1_craftedworld"},
          {"name": "Catherine: Full Body", "pic": "o1_catherine"},
          {"name": "Princess Peach: Showtime!", "pic": "o1_peachshowtime"},
-         {"name": "Super Mario RPG", "pic": "o1_marioRPG"},
-         {"name": "Kirby Air Riders", "pic": "o1_kirbyAir"},
+         {"name": "Super Mario RPG", "pic": "o1_mariorpg"},
+         {"name": "Kirby Air Riders", "pic": "o1_kirbyair"},
 		     {"name": "Twitch", "pic": "twitch"}],
 	"enabled": true,
 	"gameLibrary": [
@@ -160,7 +160,7 @@
       },
       {
         "name": "Doki Doki Literature Club Plus!",
-        "pic": "o1_ddlc+",
+        "pic": "o1_ddlc_",
         "aliases": ["doki doki literature club plus!", "ddlcp", "ddlc+", "doki doki", "doki doki literature club", "monika after story", "just monika"]
       },
       {
@@ -200,12 +200,12 @@
       },
       {
         "name": "Super Mario RPG",
-        "pic": "o1_marioRPG",
+        "pic": "o1_mariorpg",
         "aliases": ["super mario rpg", "mario rpg"]
       },
       {
         "name": "Kirby Air Riders",
-        "pic": "o1_kirbyAir",
+        "pic": "o1_kirbyair",
         "aliases": ["kirby air riders", "air riders"]
       },
       {
