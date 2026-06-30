@@ -1,6 +1,6 @@
 {
   "name": "SwitchRPC-OscarVer",
-  "version": "1.0",
+  "version": "1.01",
   "description": "The simplest possible Nintendo Switch/Switch 2 Discord integration, now with an updated game list including Nintendo Switch 2 games.",
   "main": "index.js",
   "scripts": {

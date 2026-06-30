@@ -14,9 +14,15 @@ Bayonetta 2
 
 BOXBOY! + BOXGIRL!
 
+Catherine: Full Body
+
 Celeste
 
 Cuphead
+
+DELTARUNEv
+
+Doki Doki Literature Club Plus!
 
 Donkey Kong Country: Tropical Freeze
 
@@ -42,6 +48,10 @@ Kirby Star Allies
 
 Kirby and the Forgotten Land
 
+Luigi's Mansion 2 HD
+
+Luigi's Mansion 3
+
 Mario + Rabbids Kingdom Battle
 
 Mario Golf: Super Rush
@@ -55,6 +65,8 @@ Mario Strikers: Battle League Football
 Mario Tennis Aces
 
 Metroid Dread
+
+Metroid Prime 4: Beyond
 
 Miitopia
 
@@ -96,6 +108,8 @@ Pokemon: Let's Go Eevee!
 
 Pokemon: Let's Go Pikachu!
 
+Princess Peach: Showtime!
+
 Rhythm Heaven Groove
 
 Ring Fit Adventure
@@ -128,6 +142,8 @@ Super Mario Odyssey
 
 Super Mario Party
 
+Super Mario RPG
+
 Super Smash Bros. Ultimate
 
 The Legend of Zelda: Breath of the Wild
@@ -152,10 +168,20 @@ Xenoblade Chronicles 3
 
 Xenoblade Chronicles: Definitive Edition
 
+Yoshi's Crafted World
+
 YouTube
 
 **Switch 2:**
 
 Donkey Kong Bananza
 
+Kirby Air Riders
+
 Mario Kart World
+
+Pokemon Pokopia
+
+Star Fox
+
+Yoshi and the Mysterious Book
